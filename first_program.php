@@ -28,6 +28,7 @@ $img = 'https://tse1.mm.bing.net/th?id=OIP.1Dyth-2BFxRq7IAuG0jK0wHaEK&pid=Api&P=
         <li><a href='else_if.php'>go to else if lesson</a></li>
         <li><a href='operators.php'>go to operators lesson</a></li>
         <li><a href='loops.php'>go to loops lesson</a></li>
+        <li><a href='function.php'>go to function lesson</a></li>
     </ul>
     <h1>Welcome into My First program in php</h1>
     <h3>
