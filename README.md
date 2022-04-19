@@ -6,6 +6,6 @@
 | constant variable | [constant variable](notes/constant_lesson.md) | 
 | operators | [operators](notes/php_operators.md) | 
 | loops | [loops](notes/loops.md) | 
-| functions | [loops](notes/function.md) | 
-| arrays | [loops](notes/arrays.md) | 
-| arrays function | [loops](notes/arrays.md) | 
+| functions | [function](notes/function.md) | 
+| arrays | [arrays](notes/arrays.md) | 
+| arrays functions | [arrays functions](notes/arrays.md) | 
