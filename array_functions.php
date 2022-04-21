@@ -44,8 +44,8 @@ echo "<p>🟢 pet's array before adding </p>";
 echo '<pre>';
 print_r($pets);
 echo '</pre>';
-echo "<h2>array_push()</h2>";
 
+echo "<h2>array_push()</h2>";
 array_push($pets, 'owl', 'dolphin', 'parrot');
 echo "<p>🟢 pet's array after adding at the end </p>";
 echo '<pre>';
@@ -66,8 +66,8 @@ echo "<p> 🔴 pet's array before removing anything </p>";
 echo '<pre>';
 print_r($pets);
 echo '</pre>';
-echo "<h2>array_pop()</h2>";
 
+echo "<h2>array_pop()</h2>";
 $poped_value = array_pop($pets);
 echo "<p> 🔴 pet's array after remove an item from the end </p>";
 echo '<pre>';
@@ -98,9 +98,114 @@ sort($pets, SORT_STRING);
 echo '<pre>';
 print_r($pets);
 echo '</pre>';
+//========end=============
 
-echo "<p> 🟡 icons's array after sorting (associative array)</p>";
+//===========sort associative array=========
+echo "<p> 🟡 icons's array after sorting sort the values (associative array)</p>";
 asort($icons, SORT_STRING);
 echo '<pre>';
 print_r($icons);
 echo '</pre>';
+
+echo "<p> 🟡 icons's array after sorting sort the keys (associative array)</p>";
+ksort($icons, SORT_STRING);
+echo '<pre>';
+print_r($icons);
+echo '</pre>';
+//========end=============
+
+//=======reverse array=====
+echo "<h1>reverse an indexed array</h1>";
+echo "<p> 🔵 pet's array before reversed</p>";
+echo '<pre>';
+print_r($pets);
+echo '</pre>';
+
+echo "<p> 🔵 pet's array after reversed</p>";
+echo '<pre>';
+print_r(array_reverse($pets, true));
+echo '</pre>';
+//========end=============
+
+//=======shuffle array=====
+echo "<h1>shuffle an indexed array</h1>";
+echo "<p> 🟠 pet's array before shuffeled</p>";
+echo '<pre>';
+print_r($pets);
+echo '</pre>';
+
+shuffle($pets);
+echo "<p> 🟠 pet's array after shuffeled</p>";
+echo '<pre>';
+print_r($pets);
+echo '</pre>';
+//========end=============
+
+//=======fill array=====
+$arr = [];
+echo "<h1>fill an indexed array</h1>";
+echo "<p> 🟣 an array before filled</p>";
+echo '<pre>';
+print_r($arr);
+echo '</pre>';
+
+$arr = array_fill(0, 5, 5);
+// $arr = array_fill(-2, 5, 5);   //* start index as negative value
+echo "<p> 🟣 an array after filled</p>";
+echo '<pre>';
+print_r($arr);
+echo '</pre>';
+//========end=============
+
+//=======sum array=====
+$arr = [10, '10', 20, '20', 30, '30'];
+echo "<h1>summation an indexed array</h1>";
+echo "<p> 🟤 an array before summation</p>";
+echo '<pre>';
+print_r($arr);
+echo '</pre>';
+
+$sum = array_sum($arr);
+echo "<p> 🟤 summation of an array</p>";
+echo $sum;
+//========end=============
+
+//=======random element from an array=====
+$arr = [10, '10a', 20, '20b', 30, '30c'];
+echo "<h1>random element from an indexed array</h1>";
+echo "<p> ⚫ an array before getting random element</p>";
+echo '<pre>';
+print_r($arr);
+echo '</pre>';
+
+/* error because in this case rand value is not an array it is a single value.
+$rand = array_rand($arr);
+echo "<p> ⚫ random array</p>";
+print_r($rand);
+*/
+
+$rand = array_rand($arr,2);
+echo "<p> ⚫ random array</p>";
+print_r($rand);
+
+echo "<p> ⚫ random element/s from an array</p>";
+foreach($rand as $r){
+    echo $arr[$r] . '<br>';
+}
+//========end=============
+
+//=======unique array=====
+$arr = [10, '10a', 20, '20b', 30, '30c', 10];
+echo "<h1>unique array</h1>";
+echo "<p> 🔲 unique array </p>";
+echo '<pre>';
+print_r($arr);
+echo '</pre>';
+
+$unique = array_unique($arr, SORT_STRING);
+echo "<p> 🔲 uunique array</p>";
+echo '<pre>';
+print_r($unique);
+echo '</pre>';
+
+//========end=============

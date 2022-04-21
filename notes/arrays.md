@@ -114,7 +114,8 @@ remove item from the beginning of an array.
 
 4. sort indexed array
 
-a) sort(indexed_array, sort type); // for indexed array
+a)  - sort(indexed_array, sort type); // for indexed array
+    - rsort(indexed_array, sort type); // sort in reverse order
 
 which:
 - sort type are: (by default its value SORT_REGULAR)
@@ -122,6 +123,104 @@ which:
     - Descending Order. (SORT_DESC)
     - string order (SORT_STRING)
 
-b) asort(associative_array, sort type); // for associative array
-
+b)  - asort(associative_array, sort type); // for associative array
+    - arsort(associative_array, sort type); // sort in reverse order
 will sort the value not the key.
+
+c)  - ksort(associative_array, sort type); // for associative array
+    - krsort(associative_array, sort type); // sort in reverse order
+
+will sort the key.
+
+5. reverse array:
+
+array_reverse($array, preserve);
+
+which:
+- it reversed the array without sorting.
+- preserver: optinal by default it is false. what is benifit? keep the index as it
+- ex:
+```
+// without preserve:
+🔵 pet's array before reversed
+
+Array
+(
+    [0] => 10
+    [1] => canarys
+    [2] => cats
+    [3] => dogs
+)
+🔵 pet's array after reversed
+
+Array
+(
+    [0] => dogs
+    [1] => cats
+    [2] => canarys
+    [3] => 10
+)
+
+// with preserve:
+🔵 pet's array before reversed
+
+Array
+(
+    [0] => 10
+    [1] => canarys
+    [2] => cats
+    [3] => dogs
+)
+🔵 pet's array after reversed
+
+Array
+(
+    [3] => dogs
+    [2] => cats
+    [1] => canarys
+    [0] => 10
+)
+```
+
+6. shuffle array: shuffle($array);
+
+- to mix array's elements (يخلط العناصر بشكل عشوائي)
+- after each reload, each mix will be different from the previous mix.
+
+7. array fill: array_fill(start index, counts, value);
+
+which: 
+- to fill the array with multi elements.
+- counts: how many numbers/elements you want to fill the array.
+- value: one value that filled the array. you can make it a single value like (5, -1, 'hello', 1.2, null,...) or you can add it as array (array(5, -1, 'hello', 1.2, null,...))
+- if the start index is negative, it will start from it then jump to 0 index.
+- you can add as value another array_fill function 
+- ex:
+```
+array_fill(1, 10, array_fill(3, 4, 'hello'));
+```
+
+8. sum the elements inside array: array_sum($array);
+
+which:
+- if the array have concatinate from strings and integers, it will sum the integer numbers and ignore string values.
+- **note** if the strings value are numbers, ex: '10', it will sum it and deal with it as if it is an integer number.
+- it is sutable for indexed and associative arrays.
+
+9. array random: array_rand($array, $num);
+
+which:
+- it will get the index of the random element.
+- $num: how many random numbers you want to get. (optional)
+- if you add $num the out put will be an array of indexs 
+```
+$arr = [10, '10a', 20, '20b', 30, '30c'];
+$rand = array_rand($arr, 3);
+//for example: $rand = Array ( [0] => 1 [1] => 2 [2] => 4 )
+```
+
+10. unique array: array_unique($array, $flag);
+
+which:
+- removes duplicated elements inside an array. with its index.
+- $flag: sort flag to sort the result
