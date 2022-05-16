@@ -1,5 +1,5 @@
 # arrays:
-a linear data strucure to store multiple values. rather than declaring multiple variables, we declare an array holds multi values.
+a linear data strucure to store multiple values. rather than declaring multiple variables, we can declare an array holds multiple values.
 
 ## array types:
 1. indexed array
@@ -40,38 +40,40 @@ arr1 = array(
 
 
 - you can access a value inside any indexed array by it's index.
-- you can print all values inside any indexed array by loops (especially for and foreach loops)
+- you can print all values inside any indexed array by loops (especially for and foreach loops), or by using `print_r() function`
 
 **notes**
 
-- in associative array key datatype:
+- in associative array key datatypes (if it is):
 1. string is string:
     - `'abrar => 'a',` // abrar => a
-2. integer in integer:
+2. integer is integer:
     - `10 => 'a' ` // 10 => a
     - `'10' => 'a'` // 10 => a
 3. float is integer:
     - `10.5 => 'a'` // 10 => a
     - `10.1 => 'a'` // 10 => a
+    - `10.9 => 'a'` // 10 => a
 4. boolean is integer: 
     - `true => 'a'` // 1 => a
     - `false => 'a'` // 0 => a
 5. null is nothing:
     - `null => 'a'` //  => a
-6. key cant be array or object. 
+6. key cant be array or object. otherwise value can be. 
 7. key is unique, but value is not unique
 
-*conclusion: key is dealing with data datatypes as either integer or string*
+*conclusion: key is dealing with its datatypes as either integer or string*
 
 ## array's function (most popular):
 1. search functions:
 
-a) in_array(Needle, Haystack, Type);
+a) **in_array(Needle, Haystack, Type);**
 
 which:
 - Needle: the value that you want to search about. (exist or not)
 - Haystack: is the array that you want to search useing it.
 - Type: if the search will be identical or not.Ex: 10 !== '10'  (by default its value is false)
+- it will return 1 if it is Exist, otherwise NOTHING. so we can use it with if condition to check if a certain value is there or not.
 
 Ex:
 ```
@@ -82,40 +84,41 @@ if (in_array('dogs', $pets, true)){
 }else{
     echo "not exist";
 }
+// will print exist
 ```
 
-b) array_search(Needle, Haystack, Type);
+b) **array_search(Needle, Haystack, Type);**
 
 same as in_array method. it returns the index of searched value.
 
-c) array_key_exists(Needle, Haystack);
+c) **array_key_exists(Needle, Haystack);**
 
 it is useful for associative array more than indexed array.
 
 2. add item into array:
 
-a) array_push(array, value1, value2,...);
+a) **array_push(array, value1, value2,...);**
 
 adding items at the end of an array.
 
-b) array_unshift(array, value1, value2,...);
+b) **array_unshift(array, value1, value2,...);**
 
 adding items at the beginning of an array.
 
 3. remove items:
 
-a) array_pop(array);
+a) **array_pop(array);**
 
 remove the last item inside an array.
 
-b) array_shift(array);
+b) **array_shift(array);**
 
 remove item from the beginning of an array.
 
 4. sort indexed array
 
-a)  - sort(indexed_array, sort type); // for indexed array
-    - rsort(indexed_array, sort type); // sort in reverse order
+a)  - **sort(indexed_array, sort type);** // for indexed array
+    - **rsort(indexed_array, sort type);** // sort in reverse order
 
 which:
 - sort type are: (by default its value SORT_REGULAR)
@@ -123,18 +126,19 @@ which:
     - Descending Order. (SORT_DESC)
     - string order (SORT_STRING)
 
-b)  - asort(associative_array, sort type); // for associative array
-    - arsort(associative_array, sort type); // sort in reverse order
+b)  - **asort(associative_array, sort type);** // for associative array
+    - **arsort(associative_array, sort type);** // sort in reverse order
+
 will sort the value not the key.
 
-c)  - ksort(associative_array, sort type); // for associative array
-    - krsort(associative_array, sort type); // sort in reverse order
+c)  - **ksort(associative_array, sort type);** // for associative array
+    - **krsort(associative_array, sort type);** // sort in reverse order
 
 will sort the key.
 
 5. reverse array:
 
-array_reverse($array, preserve);
+**array_reverse($array, preserve);**
 
 which:
 - it reversed the array without sorting.
@@ -182,12 +186,12 @@ Array
 )
 ```
 
-6. shuffle array: shuffle($array);
+6. shuffle array: **shuffle($array);**
 
 - to mix array's elements (يخلط العناصر بشكل عشوائي)
 - after each reload, each mix will be different from the previous mix.
 
-7. array fill: array_fill(start index, counts, value);
+7. array fill: **array_fill(start index, counts, value);**
 
 which: 
 - to fill the array with multi elements.
@@ -200,14 +204,14 @@ which:
 array_fill(1, 10, array_fill(3, 4, 'hello'));
 ```
 
-8. sum the elements inside array: array_sum($array);
+8. sum the elements inside array: **array_sum($array);**
 
 which:
 - if the array have concatinate from strings and integers, it will sum the integer numbers and ignore string values.
-- **note** if the strings value are numbers, ex: '10', it will sum it and deal with it as if it is an integer number.
-- it is sutable for indexed and associative arrays.
+- **note** if the strings value are numbers, ex: '10' or '1a0', it will sum it and deal with it as if it is an integer number. for '1a0' it will consider it as 1.
+- it is sutable for indexed and associative arrays. for associative array will sum the values not the keys.
 
-9. array random: array_rand($array, $num);
+9. array random: **array_rand($array, $num);**
 
 which:
 - it will get the index of the random element.
@@ -219,7 +223,7 @@ $rand = array_rand($arr, 3);
 //for example: $rand = Array ( [0] => 1 [1] => 2 [2] => 4 )
 ```
 
-10. unique array: array_unique($array, $flag);
+10. unique array: **array_unique($array, $flag);**
 
 which:
 - removes duplicated elements inside an array. with its index.

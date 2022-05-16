@@ -3,23 +3,28 @@ $pets = array('cats', 'dogs', 'hamisters', 'horses', 'ducks', 'gold fishes', 'ca
 
 //=======search============
 echo "<h1>Search methods</h1>";
+//! in_array()
 echo "<h2>in_array()</h2>";
-$pet_name = 'dgs';
+$pet_name = 's';
+// $s = in_array($pet_name, $pets, true); //* it will return 1 if value there else nothing
+// echo $s;
 if (in_array($pet_name, $pets, true)){
     echo "($pet_name) exist";
 }else{
     echo "($pet_name) not exist";
 }
 
+//! array_search()
 echo "<h2>array_search()</h2>";
-$pet_name = 's';
+$pet_name = 'do';
 if (array_search($pet_name, $pets, true)){
     echo "($pet_name) exist";
 }else{
     echo "($pet_name) not exist";
 }
-// $index = array_search($pet_name, $pets, true); //* if pet_name not exist in the array in this example it will return the first value 
+// $index = array_search($pet_name, $pets, true); 
 // echo "value (" . $pets[$index] . ") is found in index $index ";
+
 
 echo "<h2>array_key_exists()</h2>";
 
@@ -94,6 +99,7 @@ echo '</pre>';
 
 
 echo "<p> 🟡 pet's array after sorting (indexed array)</p>";
+// rsort($pets, SORT_STRING);
 sort($pets, SORT_STRING);
 echo '<pre>';
 print_r($pets);
@@ -101,14 +107,16 @@ echo '</pre>';
 //========end=============
 
 //===========sort associative array=========
-echo "<p> 🟡 icons's array after sorting sort the values (associative array)</p>";
+echo "<p> 🟡 icons's array after sorting the values (associative array)</p>";
 asort($icons, SORT_STRING);
+// arsort($icons, SORT_STRING);
 echo '<pre>';
 print_r($icons);
 echo '</pre>';
 
-echo "<p> 🟡 icons's array after sorting sort the keys (associative array)</p>";
+echo "<p> 🟡 icons's array after sorting the keys (associative array)</p>";
 ksort($icons, SORT_STRING);
+// krsort($icons, SORT_STRING);
 echo '<pre>';
 print_r($icons);
 echo '</pre>';
@@ -121,9 +129,14 @@ echo '<pre>';
 print_r($pets);
 echo '</pre>';
 
-echo "<p> 🔵 pet's array after reversed</p>";
+echo "<p> 🔵 pet's array after reversed with preserve</p>";
 echo '<pre>';
 print_r(array_reverse($pets, true));
+echo '</pre>';
+
+echo "<p> 🔵 pet's array after reversed without preserve</p>";
+echo '<pre>';
+print_r(array_reverse($pets));
 echo '</pre>';
 //========end=============
 
@@ -178,10 +191,13 @@ echo '<pre>';
 print_r($arr);
 echo '</pre>';
 
-/* error because in this case rand value is not an array it is a single value.
+//error if you loop through the $rand because in this case rand value is not an array it is a single value.
+/*
 $rand = array_rand($arr);
 echo "<p> ⚫ random array</p>";
 print_r($rand);
+echo '<br>';
+print_r($arr[$rand]);
 */
 
 $rand = array_rand($arr,2);
@@ -190,22 +206,21 @@ print_r($rand);
 
 echo "<p> ⚫ random element/s from an array</p>";
 foreach($rand as $r){
-    echo $arr[$r] . '<br>';
+    echo $arr[$r] . '  ';
 }
 //========end=============
 
 //=======unique array=====
-$arr = [10, '10a', 20, '20b', 30, '30c', 10];
+$arr = [10, '10a', 20, '20b', 10, 20, 30, '30c'];
 echo "<h1>unique array</h1>";
-echo "<p> 🔲 unique array </p>";
+echo "<p> 🔲 the original array </p>";
 echo '<pre>';
 print_r($arr);
 echo '</pre>';
 
 $unique = array_unique($arr, SORT_STRING);
-echo "<p> 🔲 uunique array</p>";
+echo "<p> 🔲 unique array</p>";
 echo '<pre>';
 print_r($unique);
 echo '</pre>';
-
 //========end=============

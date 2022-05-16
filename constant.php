@@ -14,7 +14,7 @@
   <body>
     <?php
     echo NAME.'<br>';
-    echo age.'<br>';
+    echo AGE.'<br>';
     echo a;
 
     ?>
