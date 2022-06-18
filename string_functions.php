@@ -1,7 +1,7 @@
 <?php
 
-// ======== explode function ===========
-echo '<h2>Explode string function</h2>';
+// ======== explode string function ===========
+echo '<h2>explode function</h2>';
 $full_name  = "abrar nidal mousa alzubaidi";
 $explode_full_name = explode(" ", $full_name, 0);
 echo '<pre>';
@@ -25,8 +25,8 @@ foreach($files_name_array as $file){
     echo '<link rel="stylesheet"' .  "href='css/" . $file . ".css'>";
 }
 
-// ======== implode function ===========
-echo '<h2>Implode string function</h2>';
+// ======== implode string function ===========
+echo '<h2>Implode function</h2>';
 $full_name_as_a_string = implode(",", $explode_full_name);
 
 echo '<p>' . $full_name_as_a_string . '</p>';
@@ -40,8 +40,8 @@ $array = ['lukas', 'lukas@example.com', '+978541263'];
 $s = join(",", $array);
 echo '<p>' . $s . '</p>';
 
-// ======== str_split function ===========
-echo '<h2>split string function</h2>';
+// ======== split string function ===========
+echo '<h2>str_split function</h2>';
 $chars = 'ahmad ali';
 $chars_array = str_split($chars);
 echo "<pre>";
@@ -55,8 +55,8 @@ print_r($chars_array);
 echo "</pre>";
 
 
-// ======== chunk_split function ===========
-echo '<h2>chunk split string function</h2>';
+// ======== chunk split function ===========
+echo '<h2>chunk_split function</h2>';
 $chars = 'ahmadali';
 $chars_array = chunk_split($chars);
 echo "<div>";
@@ -67,8 +67,8 @@ echo "<div>";
 print_r($chars_array);
 echo "</div>";
 
-// ======== str_replace function ===========
-echo '<h2>replace string function</h2>';
+// ======== replacestring function ===========
+echo '<h2>str_replace function</h2>';
 $str = 'ahmad,2000,issa,1000,fatima,2050,yosef,2600';
 // echo str_replace(['ahmad','2000'], 'Done', $str);
 // echo str_replace(['ahmad','2000'], ['@', '@@'], $str);
@@ -97,48 +97,48 @@ for($i = 0; $i<count($names); $i++){
 echo '</table>';
 // =============END ==============
 
-// ========= str_repeat function =========
-echo '<h2>repeat string function</h2>';
+// ========= repeat string function =========
+echo '<h2>str_repeat function</h2>';
 $repeate_string = ' \(≧∇≦)/ (╯°□°）╯    ';
 echo '<p>'. str_repeat($repeate_string, 5) . '</p>';
 // ========= END ===================
 
-// =========== str_shuffle function =========
-echo '<h2>shuffle string function</h2>';
+// =========== string shuffle function =========
+echo '<h2>str_shuffle string function</h2>';
 $shuffle_string = '(>w<)';
 echo '<p>'. str_shuffle($shuffle_string) . '</p>';
 // ========= END =================
 
-// =========== strlen function =========
-echo '<h2>length string function</h2>';
+// =========== string length function =========
+echo '<h2>strlen function</h2>';
 echo '<p>'. "(>w<) length is: " .  strlen('(>w<)') . '</p>';
 // ========= END =================
 
-// =========== addslash function =========
-echo '<h2>add slashes string function</h2>';
+// =========== add slashes function =========
+echo '<h2>addslashes string function</h2>';
 $str_slash = "i' am blue :(  \ NULL";
 echo '<p> normal string is ***** '. $str_slash . ' *****</p>';
 echo '<p> after add slash function *****  '. addslashes($str_slash) . ' *****</p>';
 // ========= END =================
 
-// =========== stripslashes function =========
-echo '<h2>strip slashes string function</h2>';
+// =========== strip slashes function =========
+echo '<h2>stripslashes string function</h2>';
 $str_slash = "i' am blue :(  \ NULL";
 echo '<p> normal string is ***** '. $str_slash . ' *****</p>';
 echo '<p> after add slash function *****  '. addslashes($str_slash) . ' *****</p>';
 echo '<p> after clean it from slashs by strip slashes function *****  '. stripslashes($str_slash) . ' *****</p>';
 // ========= END =================
 
-// =========== striptags function =========
-echo '<h2>strip tags string function</h2>';
+// =========== strip tags function =========
+echo '<h2>strip_tags string function</h2>';
 $str_slash = "go to <a href='https://google.com'> <b>Google</b></a> to Search about <span style='color:green'>anything</span>";
 echo '<p> normal string is ***** '. $str_slash . ' *****</p>';
 echo '<p> after implement strip tags without allowed_tags properity *****  '. strip_tags($str_slash) . ' *****</p>';
 echo '<p> after implement strip tags with allowed_tags properity *****  '. strip_tags($str_slash, "<a><span>") . ' *****</p>';
 // ========= END =================
 
-// =========== strtolower, strtoupper, lcfirst, ucfirst and ucwords function =========
-echo '<h2>lower & upper string functions</h2>';
+// =========== lower & upper string functions =========
+echo '<h2>strtolower, strtoupper, lcfirst, ucfirst and ucwords function</h2>';
 $str = "my name is ABRAR";
 echo '<p> normal string is ***** '. $str . ' *****</p>';
 echo '<p> after implement lower string *****  '. strtolower($str) . ' *****</p>';
@@ -162,26 +162,155 @@ echo '<p> after implement trim with special chars *****  '. $trimed_str . ' ****
 // ========= END =================
 
 // =========== string word count function =========
-echo '<h2>string word count function</h2>';
+echo '<h2>str_word_count function</h2>';
 $str = "my name is abrar  / ++ ====";
 echo '<p> normal string is ***** '. $str . ' ***** and its length (by words) is '. str_word_count($str, 0) .' </p>';
 echo '<p> ▶ after implement str_word_count with format=1 ***** </p>';
 echo '<pre>';
-echo print_r(str_word_count($str, 1));
+print_r(str_word_count($str, 1));
 echo '<p> and its length (by words) is '. str_word_count($str) .' </p>';
 echo '</pre>';
 echo '<p> ▶ after implement str_word_count with format=2 ***** </p>';
 echo '<pre>';
-echo print_r(str_word_count($str, 2));
+print_r(str_word_count($str, 2));
 echo '<p> and its length (by words) is '. str_word_count($str) .' </p>';
 echo '</pre>';
 echo '<p> ▶ after implement str_word_count with format=1 and chars ***** </p>';
 echo '<pre>';
-echo print_r(str_word_count($str, 2, "/+="));
+print_r(str_word_count($str, 2, "/+="));
 $size = str_word_count($str, 2, "/+=");
 echo '<p> and its length (by words) is '. count($size) .' </p>';
 echo '</pre>';
 // ========= END =================
+
+// =========== parse string function =========
+echo '<h2>parse_str function</h2>';
+$str = "name=abrar&age=24&favColor=blue";
+echo '<p> normal string is ***** '. $str . ' *****</p>';
+parse_str($str, $res);
+echo '<pre>';
+print_r($res);
+echo "</pre>";
+// ========= END =================
+
+// =========== new line to break tag string function =========
+echo '<h2>nl2br string function</h2>';
+$str = "i am abrar \n nice to meet you";
+echo '<p> normal string is ***** '. $str . ' *****</p>';
+echo '<p> after adding break tag ***** '. nl2br($str) . ' *****</p>';
+// ========= END =================
+
+// =========== position string function =========
+echo '<h2>strpos function</h2>';
+$str = "i am abrar, nice to meet you";
+echo '<p> normal string is ***** '. $str . ' *****</p>';
+$searched_chunk = "abrar";
+$pos = strpos($str, $searched_chunk);
+echo '<p> searched string/char is: "'. $searched_chunk . '" </p>';
+if ($pos){
+  echo '<p> yes found in position '. $pos . '</p>';
+}else{
+echo '<p> not there </p>';
+}
+// ========= END =================
+
+// =========== find string or chars from a string =========
+echo '<h2>strstr function</h2>';
+$str = "i am abrar, nice to meet you";
+echo '<p> normal string is ***** '. $str . ' *****</p>';
+$searched_chunk = "abrar";
+$new_str = strstr($str, $searched_chunk);
+// $new_str = strstr($str, $searched_chunk, true); if flag set to true it will give all the chars/strings before the searched string/char
+echo '<p> searched string/char is: "'. $searched_chunk . '" and the output string is: '. $new_str .'</p>';
+
+/* 
+//* real example: if the DB has a column to stroe emails, and in some point you want to
+*   retrieve the domin that at the emails so the code will be like this:
+$str = "abrar@gmail.com";
+$domain = strstr($str, "@", false); //@gmail.com
+$domain = str_replace("@", "", $domain); //gmail.com   
+$email_name = strstr($str, "@", true); //abrar   
+*/
+// ========= END =================
+
+// =========== compair string functions =========
+echo '<h2>strcmp, strncmp function</h2>';
+$str1 = "i am abrar, nice to meet u";
+$str2 = "i'm abrar, nice to meet you";
+$comp = strcmp($str1, $str2);
+// $comp = strncmp($str1, $str2, 5); //str2 larger than str1
+echo '<p> first string: '. $str1 .' </p>';
+echo '<p> second string: '. $str2 .' </p>';
+if ($comp == 0){
+  echo '<p> yes there are equal </p>';
+}else if($comp > 0){
+echo '<p> first string larger than second string </p>';
+}else{
+echo '<p> second string larger than first string </p>';
+}
+// ========= END =================
+
+
+// =========== reverse string function =========
+echo '<h2>strrev function</h2>';
+$str = "EmmA";
+$rev = strrev($str);
+echo '<p> the string: '. $str .' </p>';
+echo '<p> the reverse: '. $rev .' </p>';
+// ========= END =================
+
+// =========== sub string function =========
+echo '<h2>substr function</h2>';
+$str = "hello";
+// $sub = substr($str, 0); //hello
+$sub = substr($str, 0, -3); //he
+// $sub = substr($str, 1); //ello
+// $sub = substr($str, 1, 3); //ell
+// $sub = substr($str, 6, 0); //empty string
+// $sub = substr($str, -3, -1); //ll
+// $sub = substr($str, -5); //from -5 to -∞ it will always return hello (the whole string)
+echo '<p> the string: '. $str .' </p>';
+echo '<p> the substring: '. $sub .' </p>';
+// ========= END =================
+
+// =========== sub string count function =========
+echo '<h2>substr_count function</h2>';
+$str = "hello world, hello php";
+$sub = substr_count($str, "hello", 0); //2
+// $sub = substr_count($str, "hello",0, -3); //2
+// $sub = substr_count($str, "hello", 1); //1
+// $sub = substr_count($str, "hello",1, 3); //0
+// $sub = substr_count($str, "hello",22, 5); // ERROR!!! Invalid length value
+// $sub = substr_count($str, "hello", -3, -1); //0
+// $sub = substr_count($str,"hello", -22); //2
+// $sub = substr_count($str,"hello", -23); //ERROR!!! Offset not contained in string 
+echo '<p> the string: '. $str .' </p>';
+echo '<p> how many count: '. $sub .' </p>';
+// ========= END =================
+
+// =========== sub string compair function =========
+echo '<h2>substr_compair function</h2>';
+$str1 = "hello world, hello php";
+$str2 = "ello";
+$sub_comp = substr_compare($str, $str2, 0); //first string larger than second string
+// $sub_comp = substr_compare($str, "hello",0, -3); //ERROR!! The length must be greater than or equal to zero 
+// $sub_comp = substr_compare($str, "hello", 1); //second string larger than first string
+// $sub_comp = substr_compare($str, "hello",1, 3); //second string larger than first string
+// $sub_comp = substr_compare($str, "hello",22, 5); // second string larger than first string
+// $sub_comp = substr_compare($str, "hello", -3, 1); //first string larger than second string
+// $sub_comp = substr_compare($str,"hello", 22); //second string larger than first string
+// $sub_comp = substr_compare($str,"hello", 23); //ERROR!!! The start position cannot exceed initial string length
+echo '<p> the first string: '. $str1 .' </p>';
+echo '<p> the second string: '. $str2 .' </p>';
+if ($sub_comp == 0){
+  echo '<p> yes there are equal </p>';
+}else if($sub_comp > 0){
+echo '<p> first string larger than second string </p>';
+}else{
+echo '<p> second string larger than first string </p>';
+}
+// ========= END =================
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

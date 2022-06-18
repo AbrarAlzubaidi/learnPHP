@@ -1,5 +1,5 @@
 # learnPHP
-php: is a programming language useful for building a dynamic sites. and it is a server side programming language.
+`php`: is a programming language useful for building a dynamic sites. and it is a server side programming language.
 
 ## advantages:
 1. server side
@@ -9,10 +9,10 @@ php: is a programming language useful for building a dynamic sites. and it is a 
 
 ## Requirements:
 1. browser: Firefox, Chrome, Microsoft-Edge, ...
-2. web-server: Apache(LAMP for linux, MAMP for mac, WAMP for windows, XAMPP for all OS)
+2. web-server: Apache(LAMP for `linux`, MAMP for `mac`, WAMP for `windows`, XAMPP for all OS)
 3. IDE
 
-php stands for: hypertext pre-processor
+`php` stands for: hypertext pre-processor
 ## lessons
 | name      | link | 
 | --------- | ---- | 
@@ -24,3 +24,4 @@ php stands for: hypertext pre-processor
 | functions | [function](notes/function.md) | 
 | arrays | [arrays](notes/arrays.md) | 
 | arrays functions | [arrays functions](notes/arrays.md#arrays-function-most-popular) | 
+| strings functions | [strings functions](notes/string_functions.md) | 
