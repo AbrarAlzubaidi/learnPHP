@@ -25,3 +25,5 @@
 | arrays | [arrays](notes/arrays.md) | 
 | arrays functions | [arrays functions](notes/arrays.md#arrays-function-most-popular) | 
 | strings functions | [strings functions](notes/string_functions.md) | 
+| include and require | [include and require](notes/control_structure.md) | 
+| switch | [switch](notes/switch.md) | 

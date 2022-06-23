@@ -318,6 +318,7 @@ echo '<p> second string larger than first string </p>';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/string_functions.css">
     <title>string's functions</title>
     <?php 
         foreach($files_name_array as $file){

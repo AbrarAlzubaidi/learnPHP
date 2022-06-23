@@ -25,7 +25,7 @@
 <html>
   <head>
     <title>data type</title>
-     <link rel="stylesheet" href="style.css"/>
+     <link rel="stylesheet" href="../css/style.css"/>
   </head>
   <body>
     <h2>using get type function: </h2>

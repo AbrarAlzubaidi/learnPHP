@@ -17,7 +17,7 @@ $img = 'https://tse1.mm.bing.net/th?id=OIP.1Dyth-2BFxRq7IAuG0jK0wHaEK&pid=Api&P=
     <title><?php 
      echo $page_title;
      ?></title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
