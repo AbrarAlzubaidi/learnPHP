@@ -14,6 +14,11 @@
 
 `php` stands for: hypertext pre-processor
 ## lessons
+
+all notes inn this repo from [docs](https://www.php.net/), include some of useful comments.
+[studied from](https://www.youtube.com/playlist?list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM)
+
+
 | name      | link | 
 | --------- | ---- | 
 | variables | [variables](notes/variables.md) | 
@@ -27,3 +32,4 @@
 | strings functions | [strings functions](notes/string_functions.md) | 
 | include and require | [include and require](notes/control_structure.md) | 
 | switch | [switch](notes/switch.md) | 
+| file system | [switch](notes/file_system.md) | 

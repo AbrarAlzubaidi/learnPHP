@@ -23,15 +23,18 @@ $img = 'https://tse1.mm.bing.net/th?id=OIP.1Dyth-2BFxRq7IAuG0jK0wHaEK&pid=Api&P=
 <body>
     <h2>lessons</h2>
     <ul>
-        <li><a href='data_type.php'>go to data type lesson</a></li>
-        <li><a href='constants.php'>go to constants lesson</a></li>
-        <li><a href='else_if.php'>go to else if lesson</a></li>
-        <li><a href='operators.php'>go to operators lesson</a></li>
+        <li><a href='data_type.php'>go to data type lesson</a></li> 
+        <li><a href='constants.php'>go to constants lesson</a></li> 
+        <li><a href='else_if.php'>go to else if lesson</a></li> 
+        <li><a href='operators.php'>go to operators lesson</a></li> 
         <li><a href='loops.php'>go to loops lesson</a></li>
         <li><a href='function.php'>go to function lesson</a></li>
-        <li><a href='arrays.php'>go to arrays lesson</a></li>
-        <li><a href='array_function.php'>go to array functions lesson</a></li>
+        <li><a href='arrays.php'>go to arrays lesson</a></li> 
+        <li><a href='array_function.php'>go to array functions lesson</a></li> 
         <li><a href='string_functions.php'>go to string functions lesson</a></li>
+        <li><a href='control_structure.php'>go to control structure lesson</a></li>
+        <li><a href='switch.php'>go to switch statement lesson</a></li>
+        <li><a href='file_system.php'>go to file system lesson</a></li>
     </ul>
     <h1>Welcome into My First program in php</h1>
     <h3>

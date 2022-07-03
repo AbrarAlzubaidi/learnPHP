@@ -1,0 +1,35 @@
+.subject{
+    background-color:#890596 ;
+    color: #F5F7B2;
+    text-align: center;
+    padding: 20px 10px;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+
+}
+body{
+    background-color:#F5F7B2 ;
+}
+p{
+    color: #CA3E6B;
+    text-align: center;
+    padding: 10px 10px;
+    width: 85%;
+    margin: auto;
+    font-size: larger;
+    font-weight: 900;
+}
+
+pre{
+    color:#CA3E6B;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;   
+}
+.content{
+    color:#890596;
+    font-size: medium
+    
+}

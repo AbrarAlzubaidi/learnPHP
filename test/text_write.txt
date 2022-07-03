@@ -1,0 +1,1 @@
+ADD this content into the file by fseek at pos34 (r+) mode
